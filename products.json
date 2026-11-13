@@ -1,0 +1,167 @@
+{
+  "site": {
+    "name": "Mound City Finds",
+    "owner": "Mound City Capital LLC",
+    "email": "merin9495@gmail.com",
+    "affiliateTag": "printsquad-20",
+    "updated": "2026-11-13"
+  },
+  "products": [
+    {
+      "asin": "B00Q7OAW1U",
+      "name": "Amazon Basics Microfiber Sheet Set, Twin, Navy",
+      "category": "Home",
+      "blurb": "A wrinkle-resistant three-piece set with deep pockets. A long-running Home & Kitchen bestseller."
+    },
+    {
+      "asin": "B01MCW7TDY",
+      "name": "Amazon Basics Slim Velvet Hangers, 50-Pack",
+      "category": "Home",
+      "blurb": "Space-saving non-slip hangers for a tidier closet. Consistently near the top of the Home list."
+    },
+    {
+      "asin": "B08QRFZ6TH",
+      "name": "Barossa Design Clear Shower Curtain Liner, 72\"",
+      "category": "Home",
+      "blurb": "A lightweight PEVA liner with rustproof grommets and bottom magnets. OEKO-TEX certified."
+    },
+    {
+      "asin": "B0CYJBB2JQ",
+      "name": "bella Fits-Anywhere 2-Slice Slim Toaster, Oatmilk",
+      "category": "Home",
+      "blurb": "A slim, long-slot toaster that tucks into tight counters without skimping on wider bread."
+    },
+    {
+      "asin": "B0C2C9NHZW",
+      "name": "Levoit Top-Fill Cool Mist Humidifier, 2.5L",
+      "category": "Home",
+      "blurb": "A quiet bedroom humidifier with a top-fill tank and auto shut-off. Easy to refill and clean."
+    },
+    {
+      "asin": "B00262227E",
+      "name": "Mrs. Meyer's Clean Day Hand Soap Refill, Lavender, 33 oz",
+      "category": "Home",
+      "blurb": "A large lavender refill for the everyday sink soap. A regular on the Beauty & Personal Care list."
+    },
+    {
+      "asin": "B0BZYCJK89",
+      "name": "Owala FreeSip Stainless Steel Water Bottle, 24 oz, Denim",
+      "category": "Fitness",
+      "blurb": "Sip through the straw or tilt to swig. Leakproof when locked, cup-holder friendly, and a current kitchen and sports bestseller."
+    },
+    {
+      "asin": "B0DF472VMZ",
+      "name": "Owala SmoothSip Slider Coffee Tumbler, 12 oz, Vanilla Bean",
+      "category": "Fitness",
+      "blurb": "A compact insulated tumbler for hot or iced drinks, with a slider lid made for the commute."
+    },
+    {
+      "asin": "B0H2FQ5FV1",
+      "name": "HydroJug Traveler Insulated Bottle, 32 oz, French Vanilla",
+      "category": "Fitness",
+      "blurb": "A triple-wall bottle with a flip-straw lid and carry handle. Holds a full liter and fits most cup holders."
+    },
+    {
+      "asin": "B09MJKJYLQ",
+      "name": "Fit Simplify Resistance Loop Bands, Set of 5",
+      "category": "Fitness",
+      "blurb": "Five color-coded loop bands with a carry bag and guide. A simple, portable strength set."
+    },
+    {
+      "asin": "B07H9KV2YN",
+      "name": "Gaiam Thick Yoga Mat with Carrying Strap",
+      "category": "Fitness",
+      "blurb": "A cushioned non-slip mat for yoga, Pilates, and floor workouts, with an easy-cinch strap."
+    },
+    {
+      "asin": "B00SDMUFMK",
+      "name": "HotHands Hand Warmers, 10-Pair Value Pack",
+      "category": "Fitness",
+      "blurb": "Air-activated warmers for walks, commutes, and cold-weather games. A seasonal sports bestseller."
+    },
+    {
+      "asin": "B0DCH8VDXF",
+      "name": "Apple EarPods with USB-C Plug",
+      "category": "Tech",
+      "blurb": "Wired earbuds with a built-in remote and mic. Works with USB-C iPhones and other USB-C devices."
+    },
+    {
+      "asin": "B0GJTFXNRX",
+      "name": "Apple AirTag (2nd Generation), Single",
+      "category": "Tech",
+      "blurb": "A small tracker for keys, bags, and wallets, with Precision Finding on compatible iPhones."
+    },
+    {
+      "asin": "B0FQFB8FMG",
+      "name": "Apple AirPods Pro 3",
+      "category": "Tech",
+      "blurb": "Apple's current flagship earbuds, with active noise cancellation, spatial audio, and USB-C charging."
+    },
+    {
+      "asin": "B0HJB69GJL",
+      "name": "Apple AirPods 5 with Active Noise Cancellation",
+      "category": "Tech",
+      "blurb": "The newest standard AirPods, with noise cancellation, spatial audio, and a USB-C case."
+    },
+    {
+      "asin": "B0DXXYS4BJ",
+      "name": "Roku Streaming Stick HD with Voice Remote",
+      "category": "Tech",
+      "blurb": "A compact HD stick that powers from the TV and adds apps, free channels, and a voice remote."
+    },
+    {
+      "asin": "B0F7Z4QZTT",
+      "name": "Amazon Fire TV Stick 4K Plus",
+      "category": "Tech",
+      "blurb": "4K streaming with Wi-Fi 6 and Alexa-powered search, plus free and live TV apps."
+    },
+    {
+      "asin": "B08KT2Z93D",
+      "name": "eos Shea Better Body Lotion, Vanilla Cashmere, 16 oz",
+      "category": "Beauty",
+      "blurb": "A whipped vanilla and caramel lotion that has been sitting at the top of Beauty & Personal Care."
+    },
+    {
+      "asin": "B074PVTPBW",
+      "name": "Mighty Patch Original Acne Patches, 36 Count",
+      "category": "Beauty",
+      "blurb": "Hydrocolloid overnight patches for whiteheads. A long-time facial-treatment bestseller."
+    },
+    {
+      "asin": "B07PBXXNCY",
+      "name": "Clean Skin Club Clean Towels XL, 50 Count",
+      "category": "Beauty",
+      "blurb": "Single-use, USDA biobased face towels for drying or makeup removal. Ultra soft, 50 in a pack."
+    },
+    {
+      "asin": "B00U2VQZDS",
+      "name": "Neutrogena Makeup Remover Wipes, Twin Pack",
+      "category": "Beauty",
+      "blurb": "Two 25-count packs of plant-based cloths that take off oil and waterproof makeup, no rinse needed."
+    },
+    {
+      "asin": "B08H3JPH74",
+      "name": "Maybelline Lash Sensational Sky High Mascara, Blackest Black",
+      "category": "Beauty",
+      "blurb": "A washable, buildable mascara for length and volume. A regular on the Beauty bestsellers list."
+    },
+    {
+      "asin": "B00TTD9BRC",
+      "name": "CeraVe Moisturizing Cream, 19 oz",
+      "category": "Beauty",
+      "blurb": "A fragrance-free face and body cream with ceramides and hyaluronic acid, in a generous tub."
+    },
+    {
+      "asin": "B01N9SPQHQ",
+      "name": "La Roche-Posay Toleriane Double Repair Face Moisturizer",
+      "category": "Beauty",
+      "blurb": "An oil-free, fragrance-free daily cream with glycerin, niacinamide, and ceramide."
+    },
+    {
+      "asin": "B0009X29WK",
+      "name": "Dr. Elsey's Ultra Unscented Clumping Cat Litter, 40 lb",
+      "category": "Pets",
+      "blurb": "A 40-pound bag of unscented clumping clay litter, and a frequent Pet Supplies bestseller."
+    }
+  ]
+}
