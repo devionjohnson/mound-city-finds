@@ -1,8 +1,19 @@
 # Mound City Finds
 
-A standalone static storefront for **Mound City Capital LLC**. It lists trending Amazon products and sends shoppers to Amazon through the Associates tag in `products.json`.
+A standalone static storefront for **Mound City Capital LLC**, a registered LLC in the St. Louis, Missouri area. It lists hand-picked trending products and sends shoppers to Amazon through the Associates tag in `products.json`.
 
-This folder is ready to open locally. It has not been deployed or published.
+Live site: https://devionjohnson.github.io/mound-city-finds/
+
+Pushing to `main` updates GitHub Pages.
+
+## Pages
+
+- `index.html` — homepage and product shelf
+- `about.html` — who operates the site and how products are chosen
+- `contact.html` — email, phone, and business name
+- `privacy.html` — privacy policy, including the AppLovin Pixel
+- `terms.html` — terms of service
+- `404.html` — not-found page in the same layout
 
 ## Local preview
 
@@ -25,7 +36,7 @@ Each product needs:
 - `asin` — the Amazon product ID from a real `amazon.com/dp/ASIN` URL. Do not invent ASINs.
 - `name` — a short, plain product name.
 - `category` — one of `Home`, `Tech`, `Beauty`, `Fitness`, or `Pets` (or add a new category; a matching icon falls back to Home).
-- `blurb` — one short line of copy. Do not put prices here. Amazon’s rules do not allow stale prices, so the page uses a “Check price on Amazon” button instead.
+- `blurb` — original descriptive text, usually a few sentences. Do not put prices here. Amazon’s rules do not allow stale prices, so the page uses a “Check price on Amazon” button instead.
 
 To add a product, append another object to the `products` array. To retire one, delete its object. Keep the JSON valid (commas in the right places), then refresh the site.
 
@@ -35,24 +46,26 @@ After a refresh, also update `site.updated` (YYYY-MM-DD) so the page date stays 
 
 ## Affiliate disclosure
 
-The site shows this sentence near the top of the page and again next to the product grid:
+The site shows this sentence at the top of every page, again next to the product grid, and in the footer:
 
-> As an Amazon Associate we earn from qualifying purchases.
+> As an Amazon Associate I earn from qualifying purchases.
 
-Do not move this into tiny footer type. Amazon’s Associates operating agreement and the FTC both require a clear disclosure.
+Do not move this into tiny footer type only. Amazon’s Associates operating agreement and the FTC both require a clear disclosure.
 
 Product links use `rel="nofollow sponsored noopener noreferrer"`.
 
+The site does not use Amazon logos and does not claim to be Amazon.
+
 ## AppLovin pixel
 
-There is a clearly marked placeholder in the `<head>` of `index.html` and `privacy.html`:
+The official AppLovin Pixel snippet lives between these comments in the `<head>` of every page:
 
 ```html
 <!-- APPLVIN_PIXEL_START -->
 <!-- APPLVIN_PIXEL_END -->
 ```
 
-Paste the official snippet between those comments when AppLovin issues one. Do not invent a pixel ID. After a pixel is added, update the Privacy Policy.
+Do not invent or replace a pixel ID. If the snippet changes, update every page and keep the Privacy Policy accurate.
 
 ## Images
 
@@ -65,4 +78,7 @@ This version uses category icons, not Amazon product photos, because those photo
 
 ## Contact
 
-Mound City Capital LLC · merin9495@gmail.com
+Mound City Capital LLC
+St. Louis, Missouri area
+merin9495@gmail.com
+(314) 897-1129
