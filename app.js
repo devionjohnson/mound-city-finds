@@ -67,16 +67,20 @@ function renderGrid(products) {
     const href = affiliateUrl(product.asin, tag);
     const article = document.createElement("article");
     article.className = "card";
+    const pageHref = product.slug ? `products/${encodeURIComponent(product.slug)}.html` : href;
     article.innerHTML = `
       <div class="icon-wrap ${ICON_CLASS[product.category] || "icon-home"}">${ICONS[product.category] || ICONS.Home}</div>
       <p class="cat-pill">${product.category}</p>
-      <h3>${escapeHtml(product.name)}</h3>
+      <h3>${product.slug ? `<a class="card-title-link" href="${pageHref}">${escapeHtml(product.name)}</a>` : escapeHtml(product.name)}</h3>
       <p class="blurb">${escapeHtml(product.blurb)}</p>
-      <a class="buy" href="${href}" target="_blank" rel="nofollow sponsored noopener noreferrer">
-        Check price on Amazon
-        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span class="visually-hidden"> (opens on Amazon)</span>
-      </a>
+      <div class="card-actions">
+        ${product.slug ? `<a class="buy-secondary" href="${pageHref}">Read the buying guide</a>` : ""}
+        <a class="buy" href="${href}" target="_blank" rel="nofollow sponsored noopener noreferrer">
+          Check price on Amazon
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="visually-hidden"> (opens on Amazon)</span>
+        </a>
+      </div>
     `;
     grid.appendChild(article);
   });

@@ -2,13 +2,16 @@
 
 A standalone static storefront for **Mound City Capital LLC**, a registered LLC in the St. Louis, Missouri area. It lists hand-picked trending products and sends shoppers to Amazon through the Associates tag in `products.json`.
 
-Live site: https://devionjohnson.github.io/mound-city-finds/
+Live site: https://moundcityfinds.shop (GitHub Pages also serves https://devionjohnson.github.io/mound-city-finds/)
 
 Pushing to `main` updates GitHub Pages.
 
 ## Pages
 
-- `index.html` — homepage and product shelf
+- `index.html` — homepage and product shelf, with links to buying guides
+- `products/<slug>.html` — one original buying-guide page per product
+- `guides/<category>.html` — comparison guides for Home, Fitness, Tech, Beauty, and Pets
+- `sitemap.xml` — URL list for crawlers
 - `about.html` — who operates the site and how products are chosen
 - `contact.html` — email, phone, and business name
 - `privacy.html` — privacy policy, including the AppLovin Pixel
@@ -37,6 +40,7 @@ Each product needs:
 - `name` — a short, plain product name.
 - `category` — one of `Home`, `Tech`, `Beauty`, `Fitness`, or `Pets` (or add a new category; a matching icon falls back to Home).
 - `blurb` — original descriptive text, usually a few sentences. Do not put prices here. Amazon’s rules do not allow stale prices, so the page uses a “Check price on Amazon” button instead.
+- `slug` — the filename of the product’s buying-guide page, without `.html`. Homepage cards link to `products/<slug>.html`.
 
 To add a product, append another object to the `products` array. To retire one, delete its object. Keep the JSON valid (commas in the right places), then refresh the site.
 

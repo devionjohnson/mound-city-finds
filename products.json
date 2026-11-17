@@ -4,7 +4,7 @@
     "owner": "Mound City Capital LLC",
     "email": "merin9495@gmail.com",
     "affiliateTag": "printsquad-20",
-    "updated": "2026-11-15",
+    "updated": "2026-11-17",
     "phone": "314-897-1129",
     "location": "St. Louis, Missouri area"
   },
@@ -13,157 +13,183 @@
       "asin": "B00Q7OAW1U",
       "name": "Amazon Basics Microfiber Sheet Set, Twin, Navy",
       "category": "Home",
-      "blurb": "A straightforward three-piece twin sheet set in navy microfiber that resists wrinkles and stays tucked with deep pockets. We listed it because it is a practical everyday bedding option when you want a simple refresh without a complicated setup. Check the current size and color options on Amazon before you buy, since this listing is for the twin navy set."
+      "blurb": "A straightforward three-piece twin sheet set in navy microfiber that resists wrinkles and stays tucked with deep pockets. We listed it because it is a practical everyday bedding option when you want a simple refresh without a complicated setup. Check the current size and color options on Amazon before you buy, since this listing is for the twin navy set.",
+      "slug": "amazon-basics-microfiber-sheet-set"
     },
     {
       "asin": "B01MCW7TDY",
       "name": "Amazon Basics Slim Velvet Hangers, 50-Pack",
       "category": "Home",
-      "blurb": "This 50-pack of slim velvet hangers is meant to free up closet space and keep shirts and dresses from sliding off a slick bar. We picked it as a utility home item: a large pack, a slimmer profile than standard plastic hangers, and a non-slip finish. If you are organizing a small closet, starting with a full set is usually more useful than mixing a few hangers at a time."
+      "blurb": "This 50-pack of slim velvet hangers is meant to free up closet space and keep shirts and dresses from sliding off a slick bar. We picked it as a utility home item: a large pack, a slimmer profile than standard plastic hangers, and a non-slip finish. If you are organizing a small closet, starting with a full set is usually more useful than mixing a few hangers at a time.",
+      "slug": "amazon-basics-slim-velvet-hangers"
     },
     {
       "asin": "B08QRFZ6TH",
       "name": "Barossa Design Clear Shower Curtain Liner, 72\"",
       "category": "Home",
-      "blurb": "A clear 72-inch PEVA shower liner with rustproof grommets and magnets along the bottom hem to help it hang straighter. It is a simple bathroom restock we included because liners wear out, and a lightweight see-through option is easy to pair with a decorative curtain. The liner is described as OEKO-TEX certified; review the current product details on Amazon for care and sizing."
+      "blurb": "A clear 72-inch PEVA shower liner with rustproof grommets and magnets along the bottom hem to help it hang straighter. It is a simple bathroom restock we included because liners wear out, and a lightweight see-through option is easy to pair with a decorative curtain. The liner is described as OEKO-TEX certified; review the current product details on Amazon for care and sizing.",
+      "slug": "barossa-design-clear-shower-curtain-liner"
     },
     {
       "asin": "B0CYJBB2JQ",
       "name": "bella Fits-Anywhere 2-Slice Slim Toaster, Oatmilk",
       "category": "Home",
-      "blurb": "This slim two-slice toaster is built for tight counters, with a long slot that can take wider slices without needing a deep footprint. We added it for small kitchens and apartments where a bulky toaster steals prep space. The oatmilk colorway is understated; confirm the finish and controls on the Amazon listing, since those can vary by model."
+      "blurb": "This slim two-slice toaster is built for tight counters, with a long slot that can take wider slices without needing a deep footprint. We added it for small kitchens and apartments where a bulky toaster steals prep space. The oatmilk colorway is understated; confirm the finish and controls on the Amazon listing, since those can vary by model.",
+      "slug": "bella-fits-anywhere-slim-toaster"
     },
     {
       "asin": "B0C2C9NHZW",
       "name": "Levoit Top-Fill Cool Mist Humidifier, 2.5L",
       "category": "Home",
-      "blurb": "A 2.5-liter cool-mist humidifier with a tank you fill from the top, which makes daily refills less messy than many bottom-fill designs. It is a quiet-leaning bedroom pick with auto shut-off when the water runs low. We listed it as a practical seasonal home item; follow the maker's cleaning guidance so the tank stays in good shape."
+      "blurb": "A 2.5-liter cool-mist humidifier with a tank you fill from the top, which makes daily refills less messy than many bottom-fill designs. It is a quiet-leaning bedroom pick with auto shut-off when the water runs low. We listed it as a practical seasonal home item; follow the maker's cleaning guidance so the tank stays in good shape.",
+      "slug": "levoit-top-fill-cool-mist-humidifier"
     },
     {
       "asin": "B00262227E",
       "name": "Mrs. Meyer's Clean Day Hand Soap Refill, Lavender, 33 oz",
       "category": "Home",
-      "blurb": "A 33-ounce lavender refill for Mrs. Meyer's everyday hand soap, meant to top up a pump bottle at the sink instead of buying a new dispenser each time. We included it as a household restock that people often repurchase once they already like the scent. If this is the soap you use, the large refill is the straightforward way to keep it on hand."
+      "blurb": "A 33-ounce lavender refill for Mrs. Meyer's everyday hand soap, meant to top up a pump bottle at the sink instead of buying a new dispenser each time. We included it as a household restock that people often repurchase once they already like the scent. If this is the soap you use, the large refill is the straightforward way to keep it on hand.",
+      "slug": "mrs-meyers-clean-day-hand-soap-refill"
     },
     {
       "asin": "B0BZYCJK89",
       "name": "Owala FreeSip Stainless Steel Water Bottle, 24 oz, Denim",
       "category": "Fitness",
-      "blurb": "The 24-ounce FreeSip bottle lets you drink through a built-in straw or unlock the spout and sip normally, then lock the lid for transit. It is stainless steel, sized for most cup holders, and the denim color is one of the current finishes. We picked it because it is a frequently requested everyday bottle for commutes, the gym, and desk use."
+      "blurb": "The 24-ounce FreeSip bottle lets you drink through a built-in straw or unlock the spout and sip normally, then lock the lid for transit. It is stainless steel, sized for most cup holders, and the denim color is one of the current finishes. We picked it because it is a frequently requested everyday bottle for commutes, the gym, and desk use.",
+      "slug": "owala-freesip-water-bottle"
     },
     {
       "asin": "B0DF472VMZ",
       "name": "Owala SmoothSip Slider Coffee Tumbler, 12 oz, Vanilla Bean",
       "category": "Fitness",
-      "blurb": "A compact 12-ounce insulated tumbler for coffee or iced drinks, with a slider lid that is easier to manage in the car than a loose sip opening. The vanilla bean finish is a light, neutral color. We listed it as a smaller companion to full-size water bottles, useful when you want a short drink to stay warm or cold on a commute."
+      "blurb": "A compact 12-ounce insulated tumbler for coffee or iced drinks, with a slider lid that is easier to manage in the car than a loose sip opening. The vanilla bean finish is a light, neutral color. We listed it as a smaller companion to full-size water bottles, useful when you want a short drink to stay warm or cold on a commute.",
+      "slug": "owala-smoothsip-slider-coffee-tumbler"
     },
     {
       "asin": "B0H2FQ5FV1",
       "name": "HydroJug Traveler Insulated Bottle, 32 oz, French Vanilla",
       "category": "Fitness",
-      "blurb": "This 32-ounce insulated bottle holds about a liter, with a flip-straw lid and a carry handle for walking or gym bags. The triple-wall build is meant to keep drinks cold, and the bottle is shaped to fit many cup holders despite the larger volume. French vanilla is a light colorway; confirm the lid style and care notes on Amazon."
+      "blurb": "This 32-ounce insulated bottle holds about a liter, with a flip-straw lid and a carry handle for walking or gym bags. The triple-wall build is meant to keep drinks cold, and the bottle is shaped to fit many cup holders despite the larger volume. French vanilla is a light colorway; confirm the lid style and care notes on Amazon.",
+      "slug": "hydrojug-traveler-insulated-bottle"
     },
     {
       "asin": "B09MJKJYLQ",
       "name": "Fit Simplify Resistance Loop Bands, Set of 5",
       "category": "Fitness",
-      "blurb": "A set of five color-coded loop bands, packed with a carry bag and a simple exercise guide. They are a portable way to add light to moderate resistance for squats, glute work, and stretching without a full rack of weights. We included the set as an inexpensive, travel-friendly fitness starter."
+      "blurb": "A set of five color-coded loop bands, packed with a carry bag and a simple exercise guide. They are a portable way to add light to moderate resistance for squats, glute work, and stretching without a full rack of weights. We included the set as an inexpensive, travel-friendly fitness starter.",
+      "slug": "fit-simplify-resistance-loop-bands"
     },
     {
       "asin": "B07H9KV2YN",
       "name": "Gaiam Thick Yoga Mat with Carrying Strap",
       "category": "Fitness",
-      "blurb": "A cushioned yoga mat with a non-slip surface and a strap so you can roll it up and carry it to a class or a clear spot on the floor. It works for yoga, Pilates, and general floor workouts when you want a bit more padding than a thin studio mat. We listed it as a straightforward home-fitness basic."
+      "blurb": "A cushioned yoga mat with a non-slip surface and a strap so you can roll it up and carry it to a class or a clear spot on the floor. It works for yoga, Pilates, and general floor workouts when you want a bit more padding than a thin studio mat. We listed it as a straightforward home-fitness basic.",
+      "slug": "gaiam-thick-yoga-mat"
     },
     {
       "asin": "B00SDMUFMK",
       "name": "HotHands Hand Warmers, 10-Pair Value Pack",
       "category": "Fitness",
-      "blurb": "Air-activated hand warmers in a ten-pair pack, meant for pockets, gloves, and cold sidelines once you open the pouch. We added them as a seasonal convenience item for walks, commutes, and outdoor events. They are single-use, so a value pack is the practical way to keep a few on hand when the temperature drops."
+      "blurb": "Air-activated hand warmers in a ten-pair pack, meant for pockets, gloves, and cold sidelines once you open the pouch. We added them as a seasonal convenience item for walks, commutes, and outdoor events. They are single-use, so a value pack is the practical way to keep a few on hand when the temperature drops.",
+      "slug": "hothands-hand-warmers"
     },
     {
       "asin": "B0DCH8VDXF",
       "name": "Apple EarPods with USB-C Plug",
       "category": "Tech",
-      "blurb": "Wired EarPods with a USB-C connector, a built-in remote, and a microphone, for phones and other devices that use USB-C. They are a simple backup or everyday option if you prefer a cord to a wireless case. We listed them because wired earbuds are easy to misplace, and this is the current USB-C EarPods style."
+      "blurb": "Wired EarPods with a USB-C connector, a built-in remote, and a microphone, for phones and other devices that use USB-C. They are a simple backup or everyday option if you prefer a cord to a wireless case. We listed them because wired earbuds are easy to misplace, and this is the current USB-C EarPods style.",
+      "slug": "apple-earpods-usb-c"
     },
     {
       "asin": "B0GJTFXNRX",
       "name": "Apple AirTag (2nd Generation), Single",
       "category": "Tech",
-      "blurb": "A single second-generation AirTag for keys, a bag, or a wallet, designed to work with Apple's finding network and Precision Finding on compatible iPhones. We included it as a small, practical tech accessory rather than a full pack, so you can add one item at a time. Review Apple's current compatibility notes on the product page before you buy."
+      "blurb": "A single second-generation AirTag for keys, a bag, or a wallet, designed to work with Apple's finding network and Precision Finding on compatible iPhones. We included it as a small, practical tech accessory rather than a full pack, so you can add one item at a time. Review Apple's current compatibility notes on the product page before you buy.",
+      "slug": "apple-airtag-2nd-generation"
     },
     {
       "asin": "B0FQFB8FMG",
       "name": "Apple AirPods Pro 3",
       "category": "Tech",
-      "blurb": "Apple's current flagship in-ear AirPods, with active noise cancellation, spatial audio, and USB-C charging. We listed them because they are a frequently searched headphone upgrade, not because this site sells or services Apple products. Check the Amazon listing for the latest box contents, fit tips, and compatibility."
+      "blurb": "Apple's current flagship in-ear AirPods, with active noise cancellation, spatial audio, and USB-C charging. We listed them because they are a frequently searched headphone upgrade, not because this site sells or services Apple products. Check the Amazon listing for the latest box contents, fit tips, and compatibility.",
+      "slug": "apple-airpods-pro-3"
     },
     {
       "asin": "B0HJB69GJL",
       "name": "Apple AirPods 5 with Active Noise Cancellation",
       "category": "Tech",
-      "blurb": "The standard AirPods model with active noise cancellation, spatial audio, and a USB-C charging case. They sit in a more everyday tier than AirPods Pro while still covering the features many commuters want. As with any Apple audio product, confirm the exact generation and case details on the current Amazon page."
+      "blurb": "The standard AirPods model with active noise cancellation, spatial audio, and a USB-C charging case. They sit in a more everyday tier than AirPods Pro while still covering the features many commuters want. As with any Apple audio product, confirm the exact generation and case details on the current Amazon page.",
+      "slug": "apple-airpods-5"
     },
     {
       "asin": "B0DXXYS4BJ",
       "name": "Roku Streaming Stick HD with Voice Remote",
       "category": "Tech",
-      "blurb": "A compact HD streaming stick that draws power from the TV and adds apps, free channels, and a voice remote to a set that may not have those services built in. We picked it as an affordable way to update an older television without buying a new one. It is an HD model, so households that want 4K should look at a higher-resolution stick instead."
+      "blurb": "A compact HD streaming stick that draws power from the TV and adds apps, free channels, and a voice remote to a set that may not have those services built in. We picked it as an affordable way to update an older television without buying a new one. It is an HD model, so households that want 4K should look at a higher-resolution stick instead.",
+      "slug": "roku-streaming-stick-hd"
     },
     {
       "asin": "B0F7Z4QZTT",
       "name": "Amazon Fire TV Stick 4K Plus",
       "category": "Tech",
-      "blurb": "A 4K streaming stick with Wi-Fi 6 and Alexa voice search, plus access to free and live TV apps on compatible televisions. We listed it as a current, widely shopped way to add 4K apps to a TV. This site is not Amazon; the stick is simply one of the products we point shoppers to review on Amazon.com."
+      "blurb": "A 4K streaming stick with Wi-Fi 6 and Alexa voice search, plus access to free and live TV apps on compatible televisions. We listed it as a current, widely shopped way to add 4K apps to a TV. This site is not Amazon; the stick is simply one of the products we point shoppers to review on Amazon.com.",
+      "slug": "amazon-fire-tv-stick-4k-plus"
     },
     {
       "asin": "B08KT2Z93D",
       "name": "eos Shea Better Body Lotion, Vanilla Cashmere, 16 oz",
       "category": "Beauty",
-      "blurb": "A 16-ounce whipped body lotion in the Vanilla Cashmere scent, a sweet vanilla-and-caramel style fragrance that has been a frequent beauty-aisle request. We included the larger bottle for people who already like the scent and want a regular moisturizer, not a travel mini. If you are sensitive to fragrance, this is a scented formula, so read the current ingredient list on Amazon."
+      "blurb": "A 16-ounce whipped body lotion in the Vanilla Cashmere scent, a sweet vanilla-and-caramel style fragrance that has been a frequent beauty-aisle request. We included the larger bottle for people who already like the scent and want a regular moisturizer, not a travel mini. If you are sensitive to fragrance, this is a scented formula, so read the current ingredient list on Amazon.",
+      "slug": "eos-shea-better-body-lotion"
     },
     {
       "asin": "B074PVTPBW",
       "name": "Mighty Patch Original Acne Patches, 36 Count",
       "category": "Beauty",
-      "blurb": "A 36-count pack of hydrocolloid patches made for surface whiteheads, meant to be worn especially overnight. We listed them as a simple, widely used skincare accessory rather than a treatment plan. They are for pimples that have come to a head; check the product directions and ingredients if you have sensitive skin."
+      "blurb": "A 36-count pack of hydrocolloid patches made for surface whiteheads, meant to be worn especially overnight. We listed them as a simple, widely used skincare accessory rather than a treatment plan. They are for pimples that have come to a head; check the product directions and ingredients if you have sensitive skin.",
+      "slug": "mighty-patch-original-acne-patches"
     },
     {
       "asin": "B07PBXXNCY",
       "name": "Clean Skin Club Clean Towels XL, 50 Count",
       "category": "Beauty",
-      "blurb": "A 50-count pack of single-use, extra-soft face towels, described as USDA biobased, for drying skin or taking off makeup without a cloth towel. We added them for people who want a clean towel each time, such as after a workout or a makeup-removal routine. The XL size is meant to feel closer to a regular washcloth than a thin wipe."
+      "blurb": "A 50-count pack of single-use, extra-soft face towels, described as USDA biobased, for drying skin or taking off makeup without a cloth towel. We added them for people who want a clean towel each time, such as after a workout or a makeup-removal routine. The XL size is meant to feel closer to a regular washcloth than a thin wipe.",
+      "slug": "clean-skin-club-clean-towels-xl"
     },
     {
       "asin": "B00U2VQZDS",
       "name": "Neutrogena Makeup Remover Wipes, Twin Pack",
       "category": "Beauty",
-      "blurb": "A twin pack of Neutrogena makeup remover wipes (two 25-count soft packs) that are meant to lift oil and waterproof makeup without a rinse. We included them as a standard vanity restock. If you have very dry or easily irritated skin, look at the current ingredients and consider a cream remover as an alternative."
+      "blurb": "A twin pack of Neutrogena makeup remover wipes (two 25-count soft packs) that are meant to lift oil and waterproof makeup without a rinse. We included them as a standard vanity restock. If you have very dry or easily irritated skin, look at the current ingredients and consider a cream remover as an alternative.",
+      "slug": "neutrogena-makeup-remover-wipes"
     },
     {
       "asin": "B08H3JPH74",
       "name": "Maybelline Lash Sensational Sky High Mascara, Blackest Black",
       "category": "Beauty",
-      "blurb": "A washable, buildable mascara in Blackest Black, worn for length and some volume without a waterproof formula that is harder to take off. We listed it as a widely available everyday makeup item. As with any mascara, replace it on a regular schedule and follow the label if your eyes are sensitive."
+      "blurb": "A washable, buildable mascara in Blackest Black, worn for length and some volume without a waterproof formula that is harder to take off. We listed it as a widely available everyday makeup item. As with any mascara, replace it on a regular schedule and follow the label if your eyes are sensitive.",
+      "slug": "maybelline-lash-sensational-sky-high-mascara"
     },
     {
       "asin": "B00TTD9BRC",
       "name": "CeraVe Moisturizing Cream, 19 oz",
       "category": "Beauty",
-      "blurb": "A 19-ounce tub of fragrance-free moisturizing cream with ceramides and hyaluronic acid, made for face and body and often used on dry skin. We picked the large tub because it is a household-size restock rather than a travel jar. It is a rich cream, so people who want a lighter gel may prefer a different formula."
+      "blurb": "A 19-ounce tub of fragrance-free moisturizing cream with ceramides and hyaluronic acid, made for face and body and often used on dry skin. We picked the large tub because it is a household-size restock rather than a travel jar. It is a rich cream, so people who want a lighter gel may prefer a different formula.",
+      "slug": "cerave-moisturizing-cream"
     },
     {
       "asin": "B01N9SPQHQ",
       "name": "La Roche-Posay Toleriane Double Repair Face Moisturizer",
       "category": "Beauty",
-      "blurb": "An oil-free, fragrance-free daily face cream with glycerin, niacinamide, and ceramide, meant for regular morning or evening use. We included it as a simple moisturizer option for people who want a lighter cream than a heavy tub. Check the current size and SPF variant on Amazon, since this line has more than one version."
+      "blurb": "An oil-free, fragrance-free daily face cream with glycerin, niacinamide, and ceramide, meant for regular morning or evening use. We included it as a simple moisturizer option for people who want a lighter cream than a heavy tub. Check the current size and SPF variant on Amazon, since this line has more than one version.",
+      "slug": "la-roche-posay-toleriane-double-repair"
     },
     {
       "asin": "B0009X29WK",
       "name": "Dr. Elsey's Ultra Unscented Clumping Cat Litter, 40 lb",
       "category": "Pets",
-      "blurb": "A 40-pound bag of unscented clumping clay litter, a no-frills box filler that many cat households repurchase in bulk. We listed it because unscented clumping litter is a steady pet-supply staple, and the large bag cuts down on extra trips. It is heavy, so plan on a manageable lift from the door to the litter area."
+      "blurb": "A 40-pound bag of unscented clumping clay litter, a no-frills box filler that many cat households repurchase in bulk. We listed it because unscented clumping litter is a steady pet-supply staple, and the large bag cuts down on extra trips. It is heavy, so plan on a manageable lift from the door to the litter area.",
+      "slug": "dr-elseys-ultra-unscented-clumping-cat-litter"
     }
   ]
 }
