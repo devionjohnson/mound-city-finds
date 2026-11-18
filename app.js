@@ -23,6 +23,10 @@ function affiliateUrl(asin, tag) {
   return url.toString();
 }
 
+function widgetImageUrl(asin, tag) {
+  return `https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=${encodeURIComponent(asin)}&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=${encodeURIComponent(tag)}&language=en_US`;
+}
+
 function formatDate(iso) {
   if (!iso) return "";
   const [y, m, d] = iso.split("-").map(Number);
@@ -69,7 +73,7 @@ function renderGrid(products) {
     article.className = "card";
     const pageHref = product.slug ? `products/${encodeURIComponent(product.slug)}.html` : href;
     article.innerHTML = `
-      <div class="icon-wrap ${ICON_CLASS[product.category] || "icon-home"}">${ICONS[product.category] || ICONS.Home}</div>
+      ${product.slug ? `<a class="card-thumb" href="${href}" target="_blank" rel="nofollow sponsored noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="${widgetImageUrl(product.asin, tag)}" data-fallback="${product.image || `images/products/${product.slug}.svg`}" alt="" width="250" height="250" loading="lazy" decoding="async"></a>` : `<div class="icon-wrap ${ICON_CLASS[product.category] || "icon-home"}">${ICONS[product.category] || ICONS.Home}</div>`}
       <p class="cat-pill">${product.category}</p>
       <h3>${product.slug ? `<a class="card-title-link" href="${pageHref}">${escapeHtml(product.name)}</a>` : escapeHtml(product.name)}</h3>
       <p class="blurb">${escapeHtml(product.blurb)}</p>
@@ -82,6 +86,17 @@ function renderGrid(products) {
         </a>
       </div>
     `;
+    const thumb = article.querySelector(".card-thumb img");
+    if (thumb) {
+      const fallback = () => {
+        thumb.onerror = null;
+        thumb.onload = null;
+        thumb.src = thumb.dataset.fallback;
+        thumb.closest(".card-thumb").classList.add("is-illustration");
+      };
+      thumb.onerror = fallback;
+      thumb.onload = () => { if (thumb.naturalWidth <= 1) fallback(); };
+    }
     grid.appendChild(article);
   });
 }

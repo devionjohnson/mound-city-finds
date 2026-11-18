@@ -50,6 +50,12 @@
         <a href="../about.html">About</a>
         <a href="../contact.html">Contact</a>
       </nav>
+      <div class="site-search" role="search">
+        <label class="visually-hidden" for="site-search-input">Search products</label>
+        <svg class="site-search-icon" viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m13 13 4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="site-search-input" class="site-search-input" type="search" placeholder="Search finds…" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="site-search-results">
+        <div id="site-search-results" class="site-search-results" role="listbox" aria-label="Product matches" hidden></div>
+      </div>
     </div>
   </header>
 
@@ -63,7 +69,6 @@
     <p>The first question is whether your cats already accept clay clumping litter. A sudden change of material can send some cats to the wrong place, so a restock of what they already use is usually calmer than an experiment. The second question is scent: unscented litter is often easier on cats and people who dislike perfume in the box. The third is weight. A 40-pound bag is a good bulk buy only if you can lift it and store it dry. Scooping still has to happen, no matter how large the bag is.</p>
     <h2>The pets picks on this shelf</h2>
     </div>
-    <p class="buy-note" style="margin: 0 0 1rem;">As an Amazon Associate I earn from qualifying purchases. <span>Amazon buttons open on Amazon.com.</span></p>
     <article class="guide-product">
       <h2><a href="../products/dr-elseys-ultra-unscented-clumping-cat-litter.html">Dr. Elsey&#x27;s Ultra Unscented Clumping Cat Litter, 40 lb</a></h2>
       <p>A 40-pound bag of unscented clumping clay litter, a no-frills box filler that many cat households repurchase in bulk. We listed it because unscented clumping litter is a steady pet-supply staple, and the large bag cuts down on extra trips. It is heavy, so plan on a manageable lift from the door to the litter area.</p>
@@ -100,5 +105,6 @@
     </div>
     <p class="footer-note">As an Amazon Associate I earn from qualifying purchases. Mound City Finds is an independent site operated by Mound City Capital LLC and is not Amazon. We participate in the Amazon Associates program. Product names belong to their owners. Prices are not shown here so they stay current on Amazon. Links use our Associates tag and open on Amazon.com.</p>
   </footer>
+  <script src="../search.js" defer></script>
 </body>
 </html>

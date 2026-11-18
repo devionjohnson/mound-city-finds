@@ -50,6 +50,12 @@
         <a href="../about.html">About</a>
         <a href="../contact.html">Contact</a>
       </nav>
+      <div class="site-search" role="search">
+        <label class="visually-hidden" for="site-search-input">Search products</label>
+        <svg class="site-search-icon" viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m13 13 4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="site-search-input" class="site-search-input" type="search" placeholder="Search finds…" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="site-search-results">
+        <div id="site-search-results" class="site-search-results" role="listbox" aria-label="Product matches" hidden></div>
+      </div>
     </div>
   </header>
 
@@ -63,7 +69,6 @@
     <p>Shop by step, not by brand. If your skin is dry, decide whether you need a rich unscented cream, a lighter face moisturizer, or a scented body lotion. If you wear makeup, you need a way to take it off, which is a different product from a dry towel. Patches are only for surface whiteheads. Mascara is a makeup item and will need a remover later. If you have sensitive skin, read the current ingredient list on Amazon, especially on scented or leave-on products. This site does not show prices, so the figure you see there stays current.</p>
     <h2>The beauty picks on this shelf</h2>
     </div>
-    <p class="buy-note" style="margin: 0 0 1rem;">As an Amazon Associate I earn from qualifying purchases. <span>Amazon buttons open on Amazon.com.</span></p>
     <article class="guide-product">
       <h2><a href="../products/eos-shea-better-body-lotion.html">eos Shea Better Body Lotion, Vanilla Cashmere, 16 oz</a></h2>
       <p>A 16-ounce whipped body lotion in the Vanilla Cashmere scent, a sweet vanilla-and-caramel style fragrance that has been a frequent beauty-aisle request. We included the larger bottle for people who already like the scent and want a regular moisturizer, not a travel mini. If you are sensitive to fragrance, this is a scented formula, so read the current ingredient list on Amazon.</p>
@@ -172,5 +177,6 @@
     </div>
     <p class="footer-note">As an Amazon Associate I earn from qualifying purchases. Mound City Finds is an independent site operated by Mound City Capital LLC and is not Amazon. We participate in the Amazon Associates program. Product names belong to their owners. Prices are not shown here so they stay current on Amazon. Links use our Associates tag and open on Amazon.com.</p>
   </footer>
+  <script src="../search.js" defer></script>
 </body>
 </html>

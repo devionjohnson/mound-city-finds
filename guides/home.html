@@ -50,6 +50,12 @@
         <a href="../about.html">About</a>
         <a href="../contact.html">Contact</a>
       </nav>
+      <div class="site-search" role="search">
+        <label class="visually-hidden" for="site-search-input">Search products</label>
+        <svg class="site-search-icon" viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m13 13 4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="site-search-input" class="site-search-input" type="search" placeholder="Search finds…" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="site-search-results">
+        <div id="site-search-results" class="site-search-results" role="listbox" aria-label="Product matches" hidden></div>
+      </div>
     </div>
   </header>
 
@@ -63,7 +69,6 @@
     <p>Before you open any Amazon listing, name the room and the problem. A tight kitchen counter points to a slim toaster, not a humidifier. A musty shower liner is a bathroom restock. Dry winter air is a different purchase from a sheet set. Also measure once: mattress height for sheets, rod-to-tub length for a liner, counter depth for a toaster, and a clear spot for a humidifier tank you will have to refill and clean. Prices are not listed on this site, so the live figure and options stay on Amazon.</p>
     <h2>The home picks on this shelf</h2>
     </div>
-    <p class="buy-note" style="margin: 0 0 1rem;">As an Amazon Associate I earn from qualifying purchases. <span>Amazon buttons open on Amazon.com.</span></p>
     <article class="guide-product">
       <h2><a href="../products/amazon-basics-microfiber-sheet-set.html">Amazon Basics Microfiber Sheet Set, Twin, Navy</a></h2>
       <p>A straightforward three-piece twin sheet set in navy microfiber that resists wrinkles and stays tucked with deep pockets. We listed it because it is a practical everyday bedding option when you want a simple refresh without a complicated setup. Check the current size and color options on Amazon before you buy, since this listing is for the twin navy set.</p>
@@ -160,5 +165,6 @@
     </div>
     <p class="footer-note">As an Amazon Associate I earn from qualifying purchases. Mound City Finds is an independent site operated by Mound City Capital LLC and is not Amazon. We participate in the Amazon Associates program. Product names belong to their owners. Prices are not shown here so they stay current on Amazon. Links use our Associates tag and open on Amazon.com.</p>
   </footer>
+  <script src="../search.js" defer></script>
 </body>
 </html>

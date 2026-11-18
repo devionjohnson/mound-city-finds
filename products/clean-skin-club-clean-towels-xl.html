@@ -50,6 +50,12 @@
         <a href="../about.html">About</a>
         <a href="../contact.html">Contact</a>
       </nav>
+      <div class="site-search" role="search">
+        <label class="visually-hidden" for="site-search-input">Search products</label>
+        <svg class="site-search-icon" viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m13 13 4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="site-search-input" class="site-search-input" type="search" placeholder="Search finds…" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="site-search-results">
+        <div id="site-search-results" class="site-search-results" role="listbox" aria-label="Product matches" hidden></div>
+      </div>
     </div>
   </header>
 
@@ -57,13 +63,20 @@
     <p class="crumbs"><a href="../index.html">Home</a> · <a href="../guides/beauty.html">Beauty guide</a> · Clean Skin Club Clean Towels XL, 50 Count</p>
     <p class="eyebrow">Beauty</p>
     <h1>Clean Skin Club Clean Towels XL, 50 Count</h1>
+    <figure class="product-hero">
+      <a class="product-hero-link" href="https://www.amazon.com/dp/B07PBXXNCY?tag=printsquad-20" target="_blank" rel="nofollow sponsored noopener noreferrer">
+        <img class="product-hero-img" src="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B07PBXXNCY&amp;Format=_SL500_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=printsquad-20&amp;language=en_US" alt="Clean Skin Club Clean Towels XL, 50 Count product image" width="500" height="500" decoding="async" data-fallback="../images/products/clean-skin-club-clean-towels-xl.svg" data-fallback-alt="Clean Skin Club Clean Towels XL, 50 Count illustration" onerror="this.onerror=null;this.onload=null;this.src=this.dataset.fallback;this.alt=this.dataset.fallbackAlt;this.closest('figure').classList.add('is-illustration')" onload="if(this.naturalWidth&lt;=1){this.onerror=null;this.onload=null;this.src=this.dataset.fallback;this.alt=this.dataset.fallbackAlt;this.closest('figure').classList.add('is-illustration')}">
+        <span class="visually-hidden"> (opens on Amazon)</span>
+      </a>
+      <img class="sitestripe-pixel" src="https://ir-na.amazon-adsystem.com/e/ir?t=printsquad-20&amp;language=en_US&amp;l=li2&amp;o=1&amp;a=B07PBXXNCY" width="1" height="1" alt="" aria-hidden="true">
+      <figcaption><span class="cap-photo">Product image from Amazon.</span><span class="cap-illus">Illustration of the product type, not a product photo.</span></figcaption>
+    </figure>
     <div class="buy-box">
       <a class="buy" href="https://www.amazon.com/dp/B07PBXXNCY?tag=printsquad-20" target="_blank" rel="nofollow sponsored noopener noreferrer">
         Check price on Amazon
         <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span class="visually-hidden"> (opens on Amazon)</span>
       </a>
-      <p class="buy-note">As an Amazon Associate I earn from qualifying purchases. <span>This button opens the product on Amazon.com, where you can check the live price and details.</span></p>
     </div>
 
     <div class="article-body">
@@ -110,7 +123,6 @@
         <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span class="visually-hidden"> (opens on Amazon)</span>
       </a>
-      <p class="buy-note">As an Amazon Associate I earn from qualifying purchases. <span>This button opens the product on Amazon.com, where you can check the live price and details.</span></p>
     </div>
     <h2>Other beauty picks</h2>
     <ul class="related-list">
@@ -139,5 +151,6 @@
     </div>
     <p class="footer-note">As an Amazon Associate I earn from qualifying purchases. Mound City Finds is an independent site operated by Mound City Capital LLC and is not Amazon. We participate in the Amazon Associates program. Product names belong to their owners. Prices are not shown here so they stay current on Amazon. Links use our Associates tag and open on Amazon.com.</p>
   </footer>
+  <script src="../search.js" defer></script>
 </body>
 </html>
