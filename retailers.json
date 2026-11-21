@@ -1,0 +1,15 @@
+{
+  "_readme": "Store buttons render ONLY for retailers in approvedRetailers with approved:true AND a link for that product. See README.md > 'Adding a newly approved retailer'. Never add a retailer that has not approved us, and never add plain (non-affiliate) links.",
+  "approvedRetailers": {
+    "amazon": {
+      "label": "Amazon",
+      "approved": true,
+      "program": "Amazon Associates (tag printsquad-20)",
+      "buttonText": "See today's price",
+      "showPrice": false,
+      "linkTemplate": "https://www.amazon.com/dp/{asin}?tag=printsquad-20"
+    }
+  },
+  "links": {},
+  "prices": {}
+}

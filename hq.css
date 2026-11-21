@@ -22,6 +22,7 @@
 .arch-glow .hero-arch { filter: drop-shadow(0 0 18px rgba(201,162,39,.8)); }
 
 @media (max-width: 640px) {
+  .site-header { position: relative; }
   .header-inner { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: .45rem .6rem; padding: .55rem .9rem .6rem; }
   .brand { grid-column: 1; }
   .night-toggle { grid-column: 2; grid-row: 1; width: 36px; height: 36px; }
@@ -208,3 +209,8 @@ body > .city-lights { position: fixed; left: 0; right: 0; bottom: 0; height: 130
 .night .hq-card { box-shadow: 0 0 0 1px rgba(242,201,76,.06), 0 10px 30px rgba(0,0,0,.35); }
 .night .site-search-results, .night .ss-option { background: var(--paper); color: var(--ink); }
 .night .eyebrow { color: #ffd76a; }
+
+.hq-section, .guides-band, .shelf { scroll-margin-top: 90px; }
+@media (max-width: 640px) { .hq-section, .guides-band, .shelf { scroll-margin-top: 10px; } }
+.buy-link span { white-space: nowrap; }
+.is-compact .buy-link .bl-long { display: none; }

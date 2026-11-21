@@ -129,7 +129,7 @@
       '<h3><a class="card-title-link" href="' + esc(imgHref) + '">' + esc(p.name) + "</a></h3>" +
       (opts.compact ? "" : '<p class="blurb">' + esc(p.blurb) + "</p>") +
       '<div class="card-actions">' + compareRow(p.asin, cfg, p.name) +
-      (page ? '<a class="buy-link" href="' + esc(page) + '">Read the buying guide <span aria-hidden="true">→</span></a>' : "") +
+      (page ? '<a class="buy-link" href="' + esc(page) + '"><span class="bl-long">Read the </span>buying guide <span aria-hidden="true">→</span></a>' : "") +
       "</div></article>";
   }
 
