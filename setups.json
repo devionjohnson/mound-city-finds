@@ -1,0 +1,28 @@
+{
+  "setups": [
+    {
+      "id": "soulard-sunday-reset",
+      "title": "The Soulard Sunday Reset",
+      "tagline": "Fresh sheets, a tidy closet, a clean shower. Sunday chores, done before the brunch line forms.",
+      "asins": ["B00Q7OAW1U", "B01MCW7TDY", "B08QRFZ6TH", "B00262227E"]
+    },
+    {
+      "id": "forest-park-morning",
+      "title": "The Forest Park Morning",
+      "tagline": "Everything for a lap around the park and a stretch after, even when it's brick-cold out.",
+      "asins": ["B0BZYCJK89", "B09MJKJYLQ", "B07H9KV2YN", "B00SDMUFMK"]
+    },
+    {
+      "id": "delmar-loop-glow-up",
+      "title": "The Delmar Loop Glow-Up",
+      "tagline": "A simple, fragrance-friendly skin routine that sets you up for a night on the Loop.",
+      "asins": ["B00TTD9BRC", "B01N9SPQHQ", "B074PVTPBW", "B00U2VQZDS"]
+    },
+    {
+      "id": "riverfront-commuter",
+      "title": "The Riverfront Commuter Kit",
+      "tagline": "Sound, coffee, and never losing your keys again. Built for the MetroLink ride downtown.",
+      "asins": ["B0FQFB8FMG", "B0GJTFXNRX", "B0DCH8VDXF", "B0DF472VMZ"]
+    }
+  ]
+}

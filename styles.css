@@ -1,19 +1,23 @@
 :root {
-  --bg: #f3eee4;
-  --bg-deep: #e7dfd1;
-  --paper: #fffbf6;
-  --ink: #241e18;
-  --ink-soft: #5c534a;
-  --muted: #7a7168;
-  --line: #e2d6c6;
-  --accent: #b5522a;
-  --accent-dark: #8c3c1c;
-  --sage: #2c4a3a;
-  --sage-mid: #3f6b52;
-  --sage-soft: #dce8de;
-  --gold: #c4a574;
-  --gold-soft: #f3e6cf;
-  --shadow: 0 10px 30px rgba(36, 30, 24, 0.06);
+  /* Mound City palette: river navy, brick red, Arch silver, gold */
+  --bg: #f3f1ec;
+  --bg-deep: #e6e3dc;
+  --paper: #fffdf9;
+  --ink: #0f1d33;
+  --ink-soft: #46526a;
+  --muted: #6d7689;
+  --line: #dcd8cf;
+  --accent: #a63a2b;
+  --accent-dark: #7e2a1f;
+  --sage: #13294b;
+  --sage-mid: #2a4a7a;
+  --sage-soft: #e3e8f0;
+  --gold: #c9a227;
+  --gold-soft: #f6ebc4;
+  --silver: #b8c0cc;
+  --silver-soft: #e8ebf0;
+  --navy-deep: #0b1a33;
+  --shadow: 0 10px 30px rgba(15, 29, 51, 0.07);
   --radius: 22px;
   --font-serif: "Fraunces", "Iowan Old Style", Georgia, serif;
   --font-sans: "Figtree", "Segoe UI", sans-serif;
@@ -28,8 +32,8 @@ body {
   font-size: 1.05rem;
   line-height: 1.6;
   background:
-    radial-gradient(1200px 500px at 10% -10%, #f8f2e6 0%, transparent 60%),
-    radial-gradient(900px 400px at 100% 0%, #efe4d4 0%, transparent 55%),
+    radial-gradient(1200px 500px at 10% -10%, #f7f6f2 0%, transparent 60%),
+    radial-gradient(900px 400px at 100% 0%, #e9ecf1 0%, transparent 55%),
     var(--bg);
   min-height: 100vh;
 }
@@ -65,7 +69,7 @@ a:hover { color: var(--accent); }
   top: 0;
   z-index: 10;
   backdrop-filter: blur(16px);
-  background: rgba(243, 238, 228, 0.88);
+  background: rgba(243, 241, 236, 0.9);
   border-bottom: 1px solid var(--line);
 }
 .header-inner {
@@ -297,7 +301,7 @@ a:hover { color: var(--accent); }
 
 .site-footer {
   border-top: 1px solid var(--line);
-  background: #ece4d6;
+  background: #e9e7e1;
   padding: 2rem 1.25rem 2.4rem;
   color: var(--ink-soft);
   font-size: 0.95rem;
