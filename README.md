@@ -84,3 +84,35 @@ Mound City Capital LLC
 St. Louis, Missouri area
 merin9495@gmail.com
 (314) 897-1129
+
+## Redesign preview (branch `redesign-preview`, not live)
+
+New files: `hq.css`, `hq.js` (shared: store buttons, My Stash, night mode, Arch loader, easter eggs), `setups.html` + `setups.js` + `setups.json` (Mound City Setups), `retailers.json` (store button config). `index.html` is now "Headquarters".
+
+### Store buttons: approved affiliate retailers only
+
+Every product card, product page and guide pick shows a row of store buttons built from `retailers.json`.
+A button appears **only** when the retailer is in `approvedRetailers` with `"approved": true` **and** there is an
+affiliate link for that product (from the retailer's `linkTemplate` or a per-product entry in `links`).
+Right now only Amazon Associates (tag `printsquad-20`) is approved, so every card shows one button: "See today's price at Amazon".
+The row is a responsive grid, so it widens automatically as approved retailers are added. No prices are displayed today.
+
+### Adding a newly approved retailer
+
+1. Only after the network (Impact, CJ, Rakuten, Awin, etc.) has **approved** us for that brand, get the affiliate deep link for each product from the network's link builder. Never use plain, non-affiliate links.
+2. Add the retailer to `approvedRetailers` in `retailers.json`:
+
+   ```json
+   "target": { "label": "Target", "approved": true, "program": "Target Partners via Impact", "buttonText": "Shop", "showPrice": true }
+   ```
+   (Add `"linkTemplate"` only if the network gives a pattern that works from the ASIN/ID alone, which is rare. Use `{asin}` as the placeholder.)
+3. Add the per-product affiliate links under `links`, keyed by the product's ASIN:
+
+   ```json
+   "links": { "B00TTD9BRC": { "target": "https://goto.target.com/c/XXXX/YYYY/ZZZZ?u=..." } }
+   ```
+   Products without a link for that retailer simply don't show its button.
+4. Optional, later: once a real price feed exists, write prices into `prices` (`{ "ASIN": { "target": 17.99 } }`).
+   Prices render only for retailers with `"showPrice": true`; Amazon stays `false` ("See today's price") until the Creators API is qualified.
+   The gold "Best price" tag shows automatically on the cheapest when two or more stores have a real price. Never type in sample or guessed prices.
+5. Test locally (`python3 -m http.server 8080`), then commit.

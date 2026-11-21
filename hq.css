@@ -216,3 +216,7 @@ body > .city-lights { position: fixed; left: 0; right: 0; bottom: 0; height: 130
 .is-compact .buy-link .bl-long { display: none; }
 .bl-short { display: none; }
 .is-compact .buy-link .bl-short { display: inline; }
+.night .nav a { color: #d6dce6; }
+.night .nav a:hover, .night .nav a[aria-current="page"] { color: var(--gold); }
+.night .brand { color: inherit; }
+@media (max-width: 640px) { .nav { gap: .8rem; } .nav a { font-size: .86rem; } }
