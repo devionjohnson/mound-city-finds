@@ -1,122 +1,124 @@
-const ICONS = {
-  Home: `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M8 22.5 24 9l16 13.5V39a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2V22.5Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M19 41V28h10v13" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg>`,
-  Tech: `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="7" y="10" width="34" height="22" rx="3" stroke="currentColor" stroke-width="2.4"/><path d="M16 40h16M24 32v8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>`,
-  Beauty: `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M16 20c0-6 4.2-11 8-11s8 5 8 11c0 8-8 18-8 18s-8-10-8-18Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M20.5 21.5c.6-3 2.4-5 3.5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>`,
-  Fitness: `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M10 18v12M16 14v20M32 14v20M38 18v12M16 24h16" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>`,
-  Pets: `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="15" cy="16" r="4" stroke="currentColor" stroke-width="2.3"/><circle cx="33" cy="16" r="4" stroke="currentColor" stroke-width="2.3"/><circle cx="10.5" cy="26" r="3.5" stroke="currentColor" stroke-width="2.3"/><circle cx="37.5" cy="26" r="3.5" stroke="currentColor" stroke-width="2.3"/><ellipse cx="24" cy="31" rx="8.5" ry="7.5" stroke="currentColor" stroke-width="2.3"/></svg>`
-};
+/* Headquarters page: Today at HQ, the full shelf, Find my pick quiz, My Stash. Needs hq.js. */
+(function () {
+  "use strict";
+  var activeCategory = "All";
+  var D = null;
 
-const ICON_CLASS = {
-  Home: "icon-home",
-  Tech: "icon-tech",
-  Beauty: "icon-beauty",
-  Fitness: "icon-fitness",
-  Pets: "icon-pets"
-};
-
-let catalog = { site: {}, products: [] };
-let activeCategory = "All";
-
-function affiliateUrl(asin, tag) {
-  const url = new URL(`https://www.amazon.com/dp/${encodeURIComponent(asin)}`);
-  url.searchParams.set("tag", tag);
-  return url.toString();
-}
-
-function widgetImageUrl(asin, tag) {
-  return `https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=${encodeURIComponent(asin)}&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=${encodeURIComponent(tag)}&language=en_US`;
-}
-
-function formatDate(iso) {
-  if (!iso) return "";
-  const [y, m, d] = iso.split("-").map(Number);
-  return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-    timeZone: "UTC"
-  });
-}
-
-function renderFilters(products) {
-  const cats = ["All", ...Array.from(new Set(products.map((p) => p.category)))];
-  const root = document.getElementById("filters");
-  root.innerHTML = "";
-  cats.forEach((cat) => {
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "filter-btn";
-    btn.textContent = cat;
-    btn.setAttribute("aria-pressed", cat === activeCategory ? "true" : "false");
-    btn.addEventListener("click", () => {
-      activeCategory = cat;
-      renderFilters(products);
-      renderGrid(products);
-    });
-    root.appendChild(btn);
-  });
-}
-
-function renderGrid(products) {
-  const list = activeCategory === "All"
-    ? products
-    : products.filter((p) => p.category === activeCategory);
-  const grid = document.getElementById("grid");
-  const empty = document.getElementById("empty");
-  const tag = catalog.site.affiliateTag;
-  grid.innerHTML = "";
-  empty.hidden = list.length > 0;
-
-  list.forEach((product) => {
-    const href = affiliateUrl(product.asin, tag);
-    const article = document.createElement("article");
-    article.className = "card";
-    const pageHref = product.slug ? `products/${encodeURIComponent(product.slug)}.html` : href;
-    article.innerHTML = `
-      ${product.slug ? `<a class="card-thumb" href="${href}" target="_blank" rel="sponsored nofollow noopener" tabindex="-1" aria-hidden="true"><img src="${escapeHtml(product.photo || widgetImageUrl(product.asin, tag))}" alt="${escapeHtml(product.name)}" width="250" height="250" loading="lazy" decoding="async"></a>` : `<div class="icon-wrap ${ICON_CLASS[product.category] || "icon-home"}">${ICONS[product.category] || ICONS.Home}</div>`}
-      <p class="cat-pill">${product.category}</p>
-      <h3><a class="card-title-link" href="${href}" target="_blank" rel="sponsored nofollow noopener">${escapeHtml(product.name)}</a></h3>
-      <p class="blurb">${escapeHtml(product.blurb)}</p>
-      <div class="card-actions">
-        <a class="buy" href="${href}" target="_blank" rel="sponsored nofollow noopener">
-          <span class="buy-label">Check price</span> <span class="buy-store">at Amazon</span>
-          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span class="visually-hidden"> (opens in a new tab)</span>
-        </a>
-        ${product.slug ? `<a class="buy-link" href="${pageHref}">Read the buying guide →</a>` : ""}
-      </div>
-    `;
-    grid.appendChild(article);
-  });
-}
-
-function escapeHtml(value) {
-  return String(value)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
-
-async function init() {
-  const countEl = document.getElementById("product-count");
-  try {
-    const res = await fetch("products.json", { cache: "no-store" });
-    if (!res.ok) throw new Error("Could not load products.json");
-    catalog = await res.json();
-    const products = catalog.products || [];
-    countEl.textContent = `${products.length} products`;
-    const updated = document.getElementById("updated-date");
-    if (catalog.site.updated) {
-      updated.dateTime = catalog.site.updated;
-      updated.textContent = formatDate(catalog.site.updated);
-    }
-    renderFilters(products);
-    renderGrid(products);
-  } catch (err) {
-    countEl.textContent = "The product list could not be loaded.";
-    console.error(err);
+  function formatDate(iso) {
+    if (!iso) return "";
+    var p = iso.split("-").map(Number);
+    return new Date(Date.UTC(p[0], p[1] - 1, p[2])).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
   }
-}
 
-init();
+  /* Today at HQ: four picks that rotate daily, one per category where possible */
+  function todaysPicks(products) {
+    var now = new Date();
+    var day = Math.floor((Date.UTC(now.getFullYear(), now.getMonth(), now.getDate())) / 864e5);
+    var cats = [];
+    products.forEach(function (p) { if (cats.indexOf(p.category) === -1) cats.push(p.category); });
+    var picks = [];
+    for (var i = 0; picks.length < 4 && i < cats.length * 3; i++) {
+      var cat = cats[(day + i) % cats.length];
+      var inCat = products.filter(function (p) { return p.category === cat && picks.indexOf(p) === -1; });
+      if (inCat.length) picks.push(inCat[(day + i) % inCat.length]);
+    }
+    return picks;
+  }
+  function renderToday() {
+    var el = document.getElementById("today-grid");
+    if (!el) return;
+    el.innerHTML = todaysPicks(D.catalog.products).map(function (p) { return MCF.productCard(p, D.retailers, { compact: true }); }).join("");
+    var d = document.getElementById("today-date");
+    if (d) d.textContent = new Date().toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" });
+  }
+
+  function renderFilters() {
+    var products = D.catalog.products;
+    var cats = ["All"].concat(Array.from(new Set(products.map(function (p) { return p.category; }))));
+    var root = document.getElementById("filters");
+    root.innerHTML = "";
+    cats.forEach(function (cat) {
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "filter-btn";
+      btn.textContent = cat;
+      btn.setAttribute("aria-pressed", cat === activeCategory ? "true" : "false");
+      btn.addEventListener("click", function () { activeCategory = cat; renderFilters(); renderGrid(); });
+      root.appendChild(btn);
+    });
+  }
+  function renderGrid() {
+    var products = D.catalog.products;
+    var list = activeCategory === "All" ? products : products.filter(function (p) { return p.category === activeCategory; });
+    document.getElementById("empty").hidden = list.length > 0;
+    document.getElementById("grid").innerHTML = list.map(function (p) { return MCF.productCard(p, D.retailers); }).join("");
+  }
+
+  /* My Stash */
+  function renderStash() {
+    var el = document.getElementById("stash-grid");
+    if (!el || !D) return;
+    var items = MCF.stash().map(function (a) { return D.byAsin[a]; }).filter(Boolean);
+    document.getElementById("stash-empty").hidden = items.length > 0;
+    el.innerHTML = items.map(function (p) { return MCF.productCard(p, D.retailers, { compact: true }); }).join("");
+  }
+
+  /* Find my pick quiz (slang, three taps) */
+  var QUIZ = [
+    { q: "What's the move today?", key: "cat", a: [
+      ["Posted up at the crib", "Home"], ["Finna hit Forest Park", "Fitness"], ["Need that tech drip", "Tech"],
+      ["Glow-up szn", "Beauty"], ["Fur baby duty", "Pets"] ] },
+    { q: "How we feelin'?", key: "mood", a: [["Keep it lowkey, just the basics", "basic"], ["Treat myself, I earned it", "treat"]] },
+    { q: "Where you gon' use it?", key: "where", a: [["Around the house", "house"], ["On the go, out in the Lou", "go"]] }
+  ];
+  var PICKS = {
+    Home: { basic_house: "mrs-meyers-clean-day-hand-soap-refill", basic_go: "amazon-basics-slim-velvet-hangers", treat_house: "levoit-top-fill-cool-mist-humidifier", treat_go: "bella-fits-anywhere-slim-toaster" },
+    Fitness: { basic_house: "fit-simplify-resistance-loop-bands", basic_go: "hothands-hand-warmers", treat_house: "gaiam-thick-yoga-mat", treat_go: "owala-freesip-water-bottle" },
+    Tech: { basic_house: "roku-streaming-stick-hd", basic_go: "apple-earpods-usb-c", treat_house: "amazon-fire-tv-stick-4k-plus", treat_go: "apple-airpods-pro-3" },
+    Beauty: { basic_house: "mighty-patch-original-acne-patches", basic_go: "neutrogena-makeup-remover-wipes", treat_house: "cerave-moisturizing-cream", treat_go: "maybelline-lash-sensational-sky-high-mascara" },
+    Pets: { basic_house: "dr-elseys-ultra-unscented-clumping-cat-litter", basic_go: "dr-elseys-ultra-unscented-clumping-cat-litter", treat_house: "dr-elseys-ultra-unscented-clumping-cat-litter", treat_go: "dr-elseys-ultra-unscented-clumping-cat-litter" }
+  };
+  var answers = {}, step = 0;
+  function renderQuiz() {
+    var box = document.getElementById("quiz-box");
+    if (!box) return;
+    if (step < QUIZ.length) {
+      var s = QUIZ[step];
+      box.innerHTML = '<p class="quiz-step">Question ' + (step + 1) + " of " + QUIZ.length + '</p><h3 class="quiz-q">' + MCF.esc(s.q) + '</h3><div class="quiz-opts">' +
+        s.a.map(function (o, i) { return '<button type="button" class="quiz-opt bouncy" data-i="' + i + '">' + MCF.esc(o[0]) + "</button>"; }).join("") + "</div>";
+      box.querySelectorAll(".quiz-opt").forEach(function (b) {
+        b.addEventListener("click", function () { answers[s.key] = s.a[+b.dataset.i][1]; step++; renderQuiz(); });
+      });
+      return;
+    }
+    var slug = PICKS[answers.cat][answers.mood + "_" + answers.where];
+    var p = D && D.bySlug[slug];
+    box.innerHTML = '<p class="quiz-step">Your pick from HQ</p><h3 class="quiz-q">Say less. This one\'s for you.</h3>' +
+      (p ? '<div class="quiz-result">' + MCF.productCard(p, D.retailers, { compact: true }) + "</div>" : "") +
+      '<button type="button" class="quiz-again">Run it back</button>';
+    box.querySelector(".quiz-again").addEventListener("click", function () { answers = {}; step = 0; renderQuiz(); });
+    MCF.syncStash();
+  }
+
+  function init() {
+    var countEl = document.getElementById("product-count");
+    MCF.load().then(function (d) {
+      D = d;
+      var products = d.catalog.products || [];
+      countEl.textContent = products.length + " products";
+      var updated = document.getElementById("updated-date");
+      if (d.catalog.site.updated) { updated.dateTime = d.catalog.site.updated; updated.textContent = formatDate(d.catalog.site.updated); }
+      renderToday();
+      renderFilters();
+      renderGrid();
+      renderStash();
+      renderQuiz();
+      MCF.syncStash();
+    }).catch(function (err) {
+      countEl.textContent = "The product list could not be loaded.";
+      console.error(err);
+    });
+    document.addEventListener("mcf:stash", renderStash);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
+})();
