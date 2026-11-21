@@ -73,17 +73,17 @@ function renderGrid(products) {
     article.className = "card";
     const pageHref = product.slug ? `products/${encodeURIComponent(product.slug)}.html` : href;
     article.innerHTML = `
-      ${product.slug ? `<a class="card-thumb" href="${href}" target="_blank" rel="nofollow sponsored noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="${widgetImageUrl(product.asin, tag)}" data-fallback="${product.image || `images/products/${product.slug}.svg`}" alt="" width="250" height="250" loading="lazy" decoding="async"></a>` : `<div class="icon-wrap ${ICON_CLASS[product.category] || "icon-home"}">${ICONS[product.category] || ICONS.Home}</div>`}
+      ${product.slug ? `<a class="card-thumb" href="${href}" target="_blank" rel="sponsored nofollow noopener" tabindex="-1" aria-hidden="true"><img src="${widgetImageUrl(product.asin, tag)}" data-fallback="${product.image || `images/products/${product.slug}.svg`}" alt="" width="250" height="250" loading="lazy" decoding="async"></a>` : `<div class="icon-wrap ${ICON_CLASS[product.category] || "icon-home"}">${ICONS[product.category] || ICONS.Home}</div>`}
       <p class="cat-pill">${product.category}</p>
-      <h3>${product.slug ? `<a class="card-title-link" href="${pageHref}">${escapeHtml(product.name)}</a>` : escapeHtml(product.name)}</h3>
+      <h3><a class="card-title-link" href="${href}" target="_blank" rel="sponsored nofollow noopener">${escapeHtml(product.name)}</a></h3>
       <p class="blurb">${escapeHtml(product.blurb)}</p>
       <div class="card-actions">
-        ${product.slug ? `<a class="buy-secondary" href="${pageHref}">Read the buying guide</a>` : ""}
-        <a class="buy" href="${href}" target="_blank" rel="nofollow sponsored noopener noreferrer">
-          Check price on Amazon
+        <a class="buy" href="${href}" target="_blank" rel="sponsored nofollow noopener">
+          <span class="buy-label">Check price</span> <span class="buy-store">at Amazon</span>
           <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span class="visually-hidden"> (opens on Amazon)</span>
+          <span class="visually-hidden"> (opens in a new tab)</span>
         </a>
+        ${product.slug ? `<a class="buy-link" href="${pageHref}">Read the buying guide →</a>` : ""}
       </div>
     `;
     const thumb = article.querySelector(".card-thumb img");

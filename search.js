@@ -103,7 +103,7 @@
       var fallback = new URL(p.image || ("images/products/" + p.slug + ".svg"), base).toString();
       html += '<div class="ss-row">' +
         '<a class="ss-option" id="ss-opt-' + i + '" role="option" aria-selected="false" href="' + esc(affiliateUrl(p.asin, tag)) +
-        '" target="_blank" rel="nofollow sponsored noopener">' +
+        '" target="_blank" rel="sponsored nofollow noopener">' +
         '<img class="ss-thumb" src="' + esc(widgetImage(p.asin, tag)) + '" data-fallback="' + esc(fallback) +
         '" data-fallback-alt="' + esc(p.name + " illustration") + '" alt="' + esc(p.name + " product image") + '" width="56" height="56" loading="lazy">' +
         '<span class="ss-text"><span class="ss-name">' + esc(p.name) + '</span><span class="ss-cat">' + esc(p.category) +
@@ -113,7 +113,7 @@
     });
     if (!hits.length) {
       html += '<div class="ss-row"><a class="ss-option ss-amazon" id="ss-opt-0" role="option" aria-selected="false" href="' +
-        esc(amazonSearchUrl(q.trim(), tag)) + '" target="_blank" rel="nofollow sponsored noopener">' +
+        esc(amazonSearchUrl(q.trim(), tag)) + '" target="_blank" rel="sponsored nofollow noopener">' +
         '<span class="ss-text"><span class="ss-name">Search Amazon for “' + esc(q.trim()) + '”</span>' +
         '<span class="ss-cat">No match on Mound City Finds · opens on Amazon</span></span></a></div>';
     }
