@@ -14,8 +14,9 @@ Pushing to `main` updates GitHub Pages.
 - `sitemap.xml` — URL list for crawlers
 - `about.html` — who operates the site and how products are chosen
 - `contact.html` — email, phone, and business name
-- `privacy.html` — privacy policy, including the AppLovin Pixel
+- `privacy.html` — privacy policy, including Google Analytics and the AppLovin Pixel
 - `terms.html` — terms of service
+- `disclosure.html` — Amazon Associates affiliate disclosure
 - `404.html` — not-found page in the same layout
 
 ## Local preview
@@ -50,7 +51,7 @@ After a refresh, also update `site.updated` (YYYY-MM-DD) so the page date stays 
 
 ## Affiliate disclosure
 
-The site shows this sentence at the top of every page, again next to the product grid, and in the footer:
+Every page shows this sentence in a disclosure bar under the header, repeats it in the footer, and links to `disclosure.html`:
 
 > As an Amazon Associate I earn from qualifying purchases.
 
