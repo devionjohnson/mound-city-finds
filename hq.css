@@ -214,3 +214,5 @@ body > .city-lights { position: fixed; left: 0; right: 0; bottom: 0; height: 130
 @media (max-width: 640px) { .hq-section, .guides-band, .shelf { scroll-margin-top: 10px; } }
 .buy-link span { white-space: nowrap; }
 .is-compact .buy-link .bl-long { display: none; }
+.bl-short { display: none; }
+.is-compact .buy-link .bl-short { display: inline; }
