@@ -765,23 +765,3 @@ a:hover { color: var(--accent); }
 @media (max-width: 760px) {
   .header-inner { flex-wrap: wrap; }
 }
-
-
-/* Visible Amazon Associates disclosure, kept quieter than the old top banner. */
-.disclosure-bar {
-  margin: 0;
-  padding: 0.5rem 1.25rem;
-  text-align: center;
-  font-size: 0.88rem;
-  line-height: 1.45;
-  color: var(--ink-soft);
-  background: #efe8db;
-  border-bottom: 1px solid var(--line);
-}
-.disclosure-bar a {
-  color: var(--sage);
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-.disclosure-bar a:hover { color: var(--accent-dark); }

@@ -16,7 +16,6 @@ Pushing to `main` updates GitHub Pages.
 - `contact.html` — email, phone, and business name
 - `privacy.html` — privacy policy, including Google Analytics and the AppLovin Pixel
 - `terms.html` — terms of service
-- `disclosure.html` — Amazon Associates affiliate disclosure
 - `404.html` — not-found page in the same layout
 
 ## Local preview
@@ -51,11 +50,9 @@ After a refresh, also update `site.updated` (YYYY-MM-DD) so the page date stays 
 
 ## Affiliate disclosure
 
-Every page shows this sentence in a disclosure bar under the header, repeats it in the footer, and links to `disclosure.html`:
+Every page shows this sentence once, in the footer at the bottom of the page:
 
 > As an Amazon Associate I earn from qualifying purchases.
-
-Do not move this into tiny footer type only. Amazon’s Associates operating agreement and the FTC both require a clear disclosure.
 
 Product links use `rel="nofollow sponsored noopener noreferrer"`.
 
