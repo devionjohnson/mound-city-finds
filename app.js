@@ -73,7 +73,7 @@ function renderGrid(products) {
     article.className = "card";
     const pageHref = product.slug ? `products/${encodeURIComponent(product.slug)}.html` : href;
     article.innerHTML = `
-      ${product.slug ? `<a class="card-thumb" href="${href}" target="_blank" rel="sponsored nofollow noopener" tabindex="-1" aria-hidden="true"><img src="${widgetImageUrl(product.asin, tag)}" data-fallback="${product.image || `images/products/${product.slug}.svg`}" alt="" width="250" height="250" loading="lazy" decoding="async"></a>` : `<div class="icon-wrap ${ICON_CLASS[product.category] || "icon-home"}">${ICONS[product.category] || ICONS.Home}</div>`}
+      ${product.slug ? `<a class="card-thumb" href="${href}" target="_blank" rel="sponsored nofollow noopener" tabindex="-1" aria-hidden="true"><img src="${escapeHtml(product.photo || widgetImageUrl(product.asin, tag))}" alt="${escapeHtml(product.name)}" width="250" height="250" loading="lazy" decoding="async"></a>` : `<div class="icon-wrap ${ICON_CLASS[product.category] || "icon-home"}">${ICONS[product.category] || ICONS.Home}</div>`}
       <p class="cat-pill">${product.category}</p>
       <h3><a class="card-title-link" href="${href}" target="_blank" rel="sponsored nofollow noopener">${escapeHtml(product.name)}</a></h3>
       <p class="blurb">${escapeHtml(product.blurb)}</p>
@@ -86,17 +86,6 @@ function renderGrid(products) {
         ${product.slug ? `<a class="buy-link" href="${pageHref}">Read the buying guide →</a>` : ""}
       </div>
     `;
-    const thumb = article.querySelector(".card-thumb img");
-    if (thumb) {
-      const fallback = () => {
-        thumb.onerror = null;
-        thumb.onload = null;
-        thumb.src = thumb.dataset.fallback;
-        thumb.closest(".card-thumb").classList.add("is-illustration");
-      };
-      thumb.onerror = fallback;
-      thumb.onload = () => { if (thumb.naturalWidth <= 1) fallback(); };
-    }
     grid.appendChild(article);
   });
 }

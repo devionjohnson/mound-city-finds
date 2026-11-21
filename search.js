@@ -100,12 +100,10 @@
     hits.forEach(function (h, i) {
       var p = h.p;
       var page = p.slug ? new URL("products/" + encodeURIComponent(p.slug) + ".html", base).toString() : "";
-      var fallback = new URL(p.image || ("images/products/" + p.slug + ".svg"), base).toString();
       html += '<div class="ss-row">' +
         '<a class="ss-option" id="ss-opt-' + i + '" role="option" aria-selected="false" href="' + esc(affiliateUrl(p.asin, tag)) +
         '" target="_blank" rel="sponsored nofollow noopener">' +
-        '<img class="ss-thumb" src="' + esc(widgetImage(p.asin, tag)) + '" data-fallback="' + esc(fallback) +
-        '" data-fallback-alt="' + esc(p.name + " illustration") + '" alt="' + esc(p.name + " product image") + '" width="56" height="56" loading="lazy">' +
+        '<img class="ss-thumb" src="' + esc(p.photo || widgetImage(p.asin, tag)) + '" alt="' + esc(p.name) + '" width="56" height="56" loading="lazy">' +
         '<span class="ss-text"><span class="ss-name">' + esc(p.name) + '</span><span class="ss-cat">' + esc(p.category) +
         ' · opens on Amazon</span></span></a>' +
         (page ? '<a class="ss-page" href="' + esc(page) + '">Our guide</a>' : "") +
@@ -118,10 +116,6 @@
         '<span class="ss-cat">No match on Mound City Finds · opens on Amazon</span></span></a></div>';
     }
     panel.innerHTML = html;
-    panel.querySelectorAll("img.ss-thumb").forEach(function (img) {
-      img.addEventListener("error", function () { onImgError(img); });
-      img.addEventListener("load", function () { if (img.naturalWidth <= 1) onImgError(img); });
-    });
     activeIndex = -1;
     input.removeAttribute("aria-activedescendant");
     open();
