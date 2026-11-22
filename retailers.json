@@ -5,7 +5,7 @@
       "label": "Amazon",
       "approved": true,
       "program": "Amazon Associates (tag printsquad-20)",
-      "buttonText": "See today's price",
+      "buttonText": "Add to cart",
       "showPrice": false,
       "linkTemplate": "https://www.amazon.com/dp/{asin}?tag=printsquad-20"
     }

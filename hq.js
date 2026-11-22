@@ -70,7 +70,7 @@
         '<span class="cmp-text"><span class="cmp-label">' + esc(l.text) + '</span><span class="cmp-store">at ' + esc(l.label) + "</span></span>" +
         '<span class="cmp-price">' + (l.price !== null ? "$" + l.price.toFixed(2) : "") + "</span>" +
         '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
-        '<span class="visually-hidden"> ' + esc(name || "") + " (opens in a new tab)</span></a>";
+        '<span class="visually-hidden"> ' + esc(name || "") + (l.key === "amazon" && window.MCFCart ? " (adds to your cart)" : " (opens in a new tab)") + "</span></a>";
     }).join("");
     return '<div class="cmp" data-count="' + links.length + '"><div class="cmp-row">' + btns + "</div></div>";
   }
