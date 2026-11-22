@@ -7,7 +7,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
 errors = []
 
-for f in ["products.json", "retailers.json", "setups.json"] + glob.glob("data/index/*.json"):
+for f in ["products.json", "retailers.json", "setups.json"] + glob.glob("data/index/*.json") + glob.glob("data/catalog/*.json"):
     try:
         json.load(open(f))
     except Exception as e:
@@ -55,6 +55,24 @@ for page in pages:
         full = path.lstrip("/") if path.startswith("/") else os.path.normpath(os.path.join(os.path.dirname(page), path))
         if not os.path.exists(full):
             errors.append(f"{page}: broken local link {ref}")
+
+if os.path.exists("data/catalog/index.json"):
+    cidx = json.load(open("data/catalog/index.json"))
+    shard_asins = set()
+    for f in glob.glob("data/catalog/items-*.json"):
+        for it in json.load(open(f))["items"]:
+            shard_asins.add(it["asin"])
+            if not it.get("image", "").startswith("https://m.media-amazon.com/images/I/"):
+                errors.append(f"catalog {it['asin']}: image is not an Amazon product photo")
+            if it.get("affiliate_url") != f"https://www.amazon.com/dp/{it['asin']}?tag=printsquad-20":
+                errors.append(f"catalog {it['asin']}: bad affiliate_url")
+    for it in cidx["items"]:
+        if not re.fullmatch(r"[A-Z0-9]{10}", it["a"]) or not it.get("i") or it["a"] not in shard_asins:
+            errors.append(f"catalog index {it.get('a')}: bad ASIN/image or missing from shards")
+        if it["a"] in {p["asin"] for p in catalog["products"]}:
+            errors.append(f"catalog index {it['a']}: duplicates a hand-made product")
+    if cidx["count"] != len(cidx["items"]):
+        errors.append("catalog index count mismatch")
 
 for js in glob.glob("*.js"):
     t = open(js).read()

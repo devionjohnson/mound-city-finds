@@ -25,9 +25,14 @@
   function count(list) { return (list || read()).reduce(function (n, i) { return n + (i.qty || 1); }, 0); }
 
   /* ---------- items ---------- */
-  function fromAsin(asin) {
+  function fromAsin(asin, raw) {
     var p = D && D.byAsin[asin];
-    if (!p) return null;
+    if (!p) {
+      // Trending-catalog item (data/catalog/): not a hand-made product, so keep the name/photo/page it was added with.
+      if (!raw || !raw.title || !/^[A-Z0-9]{10}$/.test(asin)) return null;
+      return { id: "amazon:" + asin, asin: asin, title: raw.title, image: raw.image || "", merchant: "Amazon", network: "amazon",
+        page: raw.page || "", affiliate_url: "https://www.amazon.com/dp/" + asin + "?tag=" + encodeURIComponent(tag), price: null, currency: null };
+    }
     return { id: "amazon:" + asin, asin: asin, title: p.name, image: p.photo || "", merchant: "Amazon", network: "amazon",
       page: p.slug ? MCF.url("products/" + p.slug + ".html") : "",
       affiliate_url: "https://www.amazon.com/dp/" + asin + "?tag=" + encodeURIComponent(tag), price: null, currency: null };
@@ -35,7 +40,7 @@
   function normalize(it) {
     if (!it) return null;
     if (it.asin && (!it.network || it.network === "amazon" || it.network === "site")) {
-      var a = fromAsin(it.asin);
+      var a = fromAsin(it.asin, it);
       if (a) return a;
     }
     if (!it.id || !it.affiliate_url) return null;
@@ -219,7 +224,7 @@
       D = d;
       tag = (d.catalog.site && d.catalog.site.affiliateTag) || tag;
       // Refresh saved Amazon items from the catalog (names/photos), drop ones no longer listed.
-      var list = read().map(function (i) { if (!i.asin) return i; var f = fromAsin(i.asin); if (f) f.qty = i.qty; return f; }).filter(Boolean);
+      var list = read().map(function (i) { if (!i.asin) return i; var f = fromAsin(i.asin, i); if (f) f.qty = i.qty; return f; }).filter(Boolean);
       try { localStorage.setItem(KEY, JSON.stringify(list)); } catch (e) {}
       sync();
     }).catch(function (err) { console.error(err); });

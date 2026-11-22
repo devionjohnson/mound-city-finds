@@ -89,10 +89,33 @@
             });
           });
         })
+        .then(function (items) {
+          // Merge the trending catalog (data/catalog/index.json via catalog.js, or fetched directly). Site products win on duplicate ASINs.
+          var have = {}; items.forEach(function (it) { if (it.asin) have[it.asin] = 1; });
+          return loadCatalog().then(function (cat) {
+            return items.concat(cat.filter(function (it) { return !have[it.asin]; }));
+          }).catch(function () { return items; });
+        })
         .then(function (items) { index = items; return items; })
         .catch(function (e) { loading = null; throw e; });
     }
     return loading;
+  }
+  function loadCatalog() {
+    if (window.MCFCatalog) return window.MCFCatalog.searchItems();
+    return fetch(new URL("data/catalog/index.json", base).toString(), { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error("catalog " + r.status); return r.json(); })
+      .then(function (d) {
+        var LIST = { b: "Best Sellers", n: "New Releases", m: "Movers & Shakers" };
+        return (d.items || []).map(function (it) {
+          var dot = it.i.lastIndexOf("."), b = dot > 0 ? it.i.slice(0, dot) : it.i, e = dot > 0 ? it.i.slice(dot + 1) : "jpg";
+          var where = it.s || d.cats[it.c] || "";
+          return { id: "amazon:" + it.a, source: "catalog", network: "amazon", merchant: "Amazon", title: it.t,
+            description: it.r ? "#" + it.r + " in " + (LIST[it.l] || "Best Sellers") + (where ? " · " + where : "") : where,
+            image: "https://m.media-amazon.com/images/I/" + b + "._AC_SL500_." + e, price: null, currency: null,
+            affiliate_url: "https://www.amazon.com/dp/" + it.a + "?tag=printsquad-20", asin: it.a, category: d.cats[it.c] || "",
+            brand: "", keywords: it.s || "", url: "item.html?asin=" + it.a };
+        });
+      });
   }
   function apiDown() { try { return Number(sessionStorage.getItem(API_DOWN_KEY) || 0) > Date.now(); } catch (e) { return false; } }
   function markDown() { try { sessionStorage.setItem(API_DOWN_KEY, String(Date.now() + 10 * 60 * 1000)); } catch (e) {} }
@@ -224,7 +247,7 @@
       (it.asin ? "" : '<p class="sr-merchant">' + esc(it.merchant) + (price ? ' · <b class="sr-price">' + esc(price) + "</b>" : "") + "</p>") +
       '<p class="blurb">' + esc(it.description) + "</p>" +
       '<div class="card-actions">' + addBtn(it, "cmp-btn cmp-amazon sr-add") +
-      (page ? '<a class="buy-link" href="' + esc(page) + '">Read the buying guide <span aria-hidden="true">→</span></a>' : "") +
+      (page ? '<a class="buy-link" href="' + esc(page) + '">' + (it.source === "catalog" ? "See the find" : "Read the buying guide") + ' <span aria-hidden="true">→</span></a>' : "") +
       "</div></article>";
   }
   function renderPage() {
