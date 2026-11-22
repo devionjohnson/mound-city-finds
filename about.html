@@ -104,12 +104,12 @@
         <a href="index.html#stash">My Stash <span class="stash-count" data-stash-count hidden></span></a>
         <a href="about.html" aria-current="page">About</a>
       </nav>
-      <div class="site-search" role="search">
+      <form class="site-search" role="search" action="search.html">
         <label class="visually-hidden" for="site-search-input">Search products</label>
         <svg class="site-search-icon" viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m13 13 4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        <input id="site-search-input" class="site-search-input" type="search" placeholder="Search finds…" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="site-search-results">
+        <input id="site-search-input" class="site-search-input" type="search" placeholder="Search finds…" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="site-search-results" name="q">
         <div id="site-search-results" class="site-search-results" role="listbox" aria-label="Product matches" hidden></div>
-      </div>
+      </form>
       <button type="button" class="night-toggle bouncy" aria-pressed="false" aria-label="Switch to night city lights mode">
         <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
         <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>

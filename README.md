@@ -116,3 +116,9 @@ The row is a responsive grid, so it widens automatically as approved retailers a
    Prices render only for retailers with `"showPrice": true`; Amazon stays `false` ("See today's price") until the Creators API is qualified.
    The gold "Best price" tag shows automatically on the cheapest when two or more stores have a real price. Never type in sample or guessed prices.
 5. Test locally (`python3 -m http.server 8080`), then commit.
+
+## Cart pop-up and search
+
+- `cart.js` (on every page): clicking any Amazon product/add-to-cart link adds the item to an on-site cart saved in the visitor's browser (`localStorage` key `mcf-cart`) and opens a pop-up. "Check out on Amazon" opens Amazon's Associates Add-to-Cart form (`/gp/aws/cart/add.html`, all ASINs + `AssociateTag=printsquad-20`) in a new tab. Non-Amazon items (from the live network search) check out per merchant through their own affiliate links. Without JavaScript every link is a plain affiliate link.
+- `search.js` + `search.html`: search reads `data/search-index.json` (the site's own products, rebuilt with `python3 scripts/build_search_index.py` after editing `products.json`) and, when it answers within 2.5 s, the live search API at `https://api.moundcityfinds.shop/v1/search` (network products; keys stay on the server). If the API is unreachable the static results stand. No results shows an on-site message. There is no Amazon search fallback.
+- `python3 scripts/check_site.py` runs the static checks (JSON, product pages, local links, scripts on every page, one footer disclosure). Run it before committing.
