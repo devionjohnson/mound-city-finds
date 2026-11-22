@@ -1,0 +1,11 @@
+# Appended to /etc/caddy/Caddyfile on the atlas server. Separate site block; Atlas blocks untouched.
+api.moundcityfinds.shop {
+	encode zstd gzip
+	reverse_proxy 127.0.0.1:8020 {
+		header_up X-Forwarded-For {remote_host}
+	}
+	header {
+		X-Content-Type-Options nosniff
+		-Server
+	}
+}

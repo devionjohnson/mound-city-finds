@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<result><TotalMatches>1</TotalMatches><TotalPages>1</TotalPages><PageNumber>1</PageNumber>
+<item><mid>99999</mid><merchantname>Fixture Outfitters</merchantname><linkid>123</linkid><createdon>2026-11-01/00:00:00</createdon>
+<sku>FX-1</sku><productname>Fixture Water Bottle 24 oz</productname><category><primary>Kitchen</primary><secondary>Drinkware</secondary></category>
+<price currency="USD">29.99</price><saleprice currency="USD">24.99</saleprice><upccode></upccode>
+<description><short>Fixture short description.</short><long>Longer.</long></description><keywords>bottle</keywords>
+<linkurl>https://click.linksynergy.com/link?id=FIXTURE&amp;offerid=1</linkurl><imageurl>https://example.com/fx.jpg</imageurl></item>
+</result>

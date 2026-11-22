@@ -1,0 +1,28 @@
+[Unit]
+Description=Mound City Finds live search API (mcf-search)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=mcfsearch
+Group=mcfsearch
+EnvironmentFile=/etc/mcf-search.env
+ExecStart=/usr/bin/python3 /opt/mcf-search/app.py
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+RestrictNamespaces=true
+LockPersonality=true
+MemoryMax=256M
+
+[Install]
+WantedBy=multi-user.target
